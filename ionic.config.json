@@ -1,0 +1,7 @@
+{
+  "name": "newcbtandroid",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "angular"
+}
