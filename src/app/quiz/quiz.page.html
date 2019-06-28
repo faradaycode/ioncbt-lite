@@ -1,22 +1,23 @@
 <ion-content>
-  <div class="container">
-
+  <div class="container" *ngFor="let ig of ' '.repeat(40).split(''), let x = index" id="s{{x}}"
+    [style.display]="(x > 0) ? 'none' : 'block'">
     <ion-card class="pager-soal">
       <ion-card-header>
-        <ion-card-title>Soal</ion-card-title>
+        <ion-card-title>Soal {{sJawaban}}</ion-card-title>
       </ion-card-header>
 
       <ion-card-content class="full-size">
         <div id="soal">
-          <ion-img src="../assets/img/question/ipa/0008.png"></ion-img>
+            <h5>{{currentCard}}</h5>
+          <!-- <ion-img src="../assets/img/question/ipa/0008.png"></ion-img> -->
         </div>
       </ion-card-content>
 
       <div id="nexpre">
-        <ion-button size="small">
+        <ion-button (click)="onNextClicked(x, 40)" size="small">
           prev
         </ion-button>
-        <ion-button size="small">
+        <ion-button (click)="onPrevClicked()" size="small">
           next
         </ion-button>
       </div>
@@ -26,16 +27,28 @@
       <ion-grid>
         <ion-row>
           <ion-col>
-            <ion-button expand="full">A</ion-button>
+            <ion-button (click)="onPressedChoices(1)" [ngClass]="{answeredColor: pressA, defaultColor: !pressA}"
+              expand="full">
+              A
+            </ion-button>
           </ion-col>
           <ion-col>
-            <ion-button expand="full">B</ion-button>
+            <ion-button (click)="onPressedChoices(2)" [ngClass]="{answeredColor: pressB, defaultColor: !pressB}"
+              expand="full">
+              B
+            </ion-button>
           </ion-col>
           <ion-col>
-            <ion-button expand="full">C</ion-button>
+            <ion-button (click)="onPressedChoices(3)" [ngClass]="{answeredColor: pressC, defaultColor: !pressC}"
+              expand="full">
+              C
+            </ion-button>
           </ion-col>
           <ion-col>
-            <ion-button expand="full">D</ion-button>
+            <ion-button (click)="onPressedChoices(4)" [ngClass]="{answeredColor: pressD, defaultColor: !pressD}"
+              expand="full">
+              D
+            </ion-button>
           </ion-col>
         </ion-row>
       </ion-grid>

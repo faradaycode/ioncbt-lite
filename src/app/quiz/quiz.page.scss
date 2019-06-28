@@ -27,3 +27,14 @@
     flex-direction: row;
     justify-content: space-between;
 }
+
+.answeredColor {
+    --background: var(--ion-color-warning) !important;
+    --color: var(--ion-color-warning-contrast);
+}
+
+.defaultColor {
+    --background: var(--ion-color-primary) !important;
+    --color: var(--ion-color-primary-contrast);
+}
+
