@@ -38,12 +38,13 @@ import { HttpClient } from "@angular/common/http";
 })
 export class QuizPage implements OnInit {
   flyIn: string;
+  myData: any = [];
 
   constructor(private dialog: Dialogs, private http: HttpClient) {}
 
   ngOnInit() {
     this.flyIn = "default";
-    this.getData();
+    this.getData("matematika");
   }
 
   // onPressedChoices(choice: number) {
@@ -86,26 +87,33 @@ export class QuizPage implements OnInit {
   // }
 
   onAnswer(value: string) {
-    this.dialog
-      .confirm("Yakin dengan jawabanmu?", "Peringatan", ["Ya", "Tidak"])
-      .then(_ => {
-        this.onConfirm(_.toString());
-      });
+    // this.dialog
+    //   .confirm("Yakin dengan jawabanmu?", "Peringatan", ["Ya", "Tidak"])
+    //   .then(_ => {
+    //     if (_ === 1) {
+          
+    //     }
+    //   });
+    console.log(this.myData);
   }
 
   onConfirm(buttonIndex) {
     alert("You selected button " + buttonIndex);
   }
 
-  getData() {
+  getData(keyword: string) {
     let url = "./assets/data.json";
-    this.http.get(url).subscribe((res) => {
+    let objectData: any = [];
+
+    this.http.get(url).subscribe(res => {
       let datas = res["data"];
-      let mtk: any[] = datas["matematika"];
-      
-      for (let i = 0; i < mtk.length; i++) {
-        console.log(mtk[i]);
-      }
+      objectData = datas[keyword];
+
+      objectData.sort(() => {
+        return Math.random() - 0.5;
+      });
+
+      this.myData = objectData;
     });
   }
 }

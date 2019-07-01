@@ -4,13 +4,13 @@
       {
         "qst_id": 1,
         "qst_content": "0001.png",
-        "qst_answer": "a",
+        "qst_answer": "c",
         "qst_descript": "0001.png"
       },
       {
         "qst_id": 2,
         "qst_content": "0002.png",
-        "qst_answer": "a",
+        "qst_answer": "d",
         "qst_descript": "0002.png"
       },
       {
@@ -22,7 +22,7 @@
       {
         "qst_id": 4,
         "qst_content": "0004.png",
-        "qst_answer": "a",
+        "qst_answer": "b",
         "qst_descript": "0004.png"
       },
       {
@@ -34,19 +34,19 @@
       {
         "qst_id": 6,
         "qst_content": "0006.png",
-        "qst_answer": "a",
+        "qst_answer": "d",
         "qst_descript": "0006.png"
       },
       {
         "qst_id": 7,
         "qst_content": "0007.png",
-        "qst_answer": "a",
+        "qst_answer": "c",
         "qst_descript": "0007.png"
       },
       {
         "qst_id": 8,
         "qst_content": "0008.png",
-        "qst_answer": "a",
+        "qst_answer": "b",
         "qst_descript": "0008.png"
       },
       {
@@ -58,7 +58,7 @@
       {
         "qst_id": 10,
         "qst_content": "0010.png",
-        "qst_answer": "a",
+        "qst_answer": "d",
         "qst_descript": "0010.png"
       }
     ]
